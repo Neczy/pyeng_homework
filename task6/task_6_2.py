@@ -14,6 +14,7 @@
 
 Ограничение: Все задания надо выполнять используя только пройденные темы.
 '''
+<<<<<<< HEAD
 
 user_input_ip =input('Введите IP-адресс в формате 8.8.8.8: ')
 
@@ -41,3 +42,32 @@ else:
    
 
    
+=======
+from sys import argv
+
+ip_adr = argv[1] # через КМД
+#input('Введите IP: ') запрос у пользователя
+
+ip_adr1 = ip_adr.split('.')
+
+index = ip_adr1[0]
+
+index = int(index)
+
+print(index)
+if  (ip_adr == '255.255.255.255'):
+   print( 'Ip adr: local broadcast')
+elif(ip_adr == '0.0.0.0'):
+   print( 'Ip adr: unassigned')
+elif (index <= 223 and index >= 1 ):
+   print('unicast')
+elif(index <= 224 and index >= 240):
+   print('multicast')
+else:
+   print('unused')
+
+
+      
+
+      
+>>>>>>> 3eb1e250815d7154823dee5a78f16d1737da170b
